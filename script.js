@@ -63,6 +63,6 @@ function jsResult() {
 }
 
 function jsMoves() {
-    document.querySelector('.js-moves').innerHTML = `You: <img src="css/${userMove}.jpg" class="im">
-    Computer: <img src="css/${computerMove}.jpg" class="im">`;
+    document.querySelector('.js-moves').innerHTML = `You: <img src="css-img/${userMove}.jpg" class="im">
+    Computer: <img src="css-img/${computerMove}.jpg" class="im">`;
 }
