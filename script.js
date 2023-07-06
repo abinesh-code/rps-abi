@@ -58,7 +58,7 @@ let userMove = '';
      scoreUpdate(); 
  } 
  
- const isOn = false;
+ let isOn = false;
  
  function autoPlay() {
      const arr = ['Rock','Paper','Scissor'];
