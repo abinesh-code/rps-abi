@@ -58,14 +58,27 @@ let userMove = '';
      scoreUpdate(); 
  } 
  
+ const isOn = false;
+ 
  function autoPlay() {
      const arr = ['Rock','Paper','Scissor'];
-     setInterval(function() {
-         const index = Math.floor(Math.random() * arr.length);
-         const random = arr[index];
+     
+     if(!isOn) {
+      id = setInterval(function() {
+          const index = Math.floor(Math.random() * arr.length);
+          const random = arr[index];
          
          play(random);
      },1000)
+     isOn = true;
+     document.querySelector('.auto').innerHTML = 'Stop';
+    }
+    else {
+        clearInterval(id);
+        isOn = false;
+        document.querySelector('.auto').innerHTML = 'AutoPlay';
+        
+    }
  }
   
  function jsResult() { 
